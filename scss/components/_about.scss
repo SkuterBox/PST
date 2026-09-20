@@ -5,7 +5,19 @@
     &__subheader {
         color: var(--c-white);
         font-size: clamp(1.25rem, 0.9943rem + 1.1364vw, 2rem);
-        margin: 0;
+        margin: 0 0 1em;
         font-weight: 700;
+        text-wrap: balance;
+    }
+    &__description {
+        display: grid;
+        font-size: clamp(0.875rem, 0.7898rem + 0.3788vw, 1.125rem);
+        opacity: 0.75;
+        line-height: 1.55;
+        gap: 1em;
+        p {
+            margin: 0;
+            padding: 0;
+        }
     }
 }

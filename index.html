@@ -5,17 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Power Synergy Team</title>
     <link rel="stylesheet" href="css/style.css">
-    <script>
-        (() => {
-            const html = document.documentElement;
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark' || savedTheme === 'light') {
-                html.dataset.theme = savedTheme;
-            } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                html.dataset.theme = 'dark';
-            }
-        })();
-    </script>
 </head>
 <body>
     <header class="header">
@@ -35,13 +24,13 @@
                     </a>
                 </li>
                 <li class="header-menu__item">
-                    <a href="#qualifications">
-                        Kwalifikacje
+                    <a href="#about">
+                        O nas
                     </a>
                 </li>
                 <li class="header-menu__item">
-                    <a href="#about">
-                        O nas
+                    <a href="#qualifications">
+                        Kwalifikacje
                     </a>
                 </li>
                 <li class="header-menu__item header-menu__item--contact">
@@ -50,22 +39,6 @@
                     </a>
                 </li>
             </ul>
-            <div class="header__theme">
-                <svg data-theme="light" class="img" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="var(--c-white)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <circle cx="12" cy="12" r="4"/>
-                    <path d="M12 2v2"/>
-                    <path d="M12 20v2"/>
-                    <path d="m4.93 4.93 1.42 1.42"/>
-                    <path d="m17.66 17.66 1.41 1.41"/>
-                    <path d="M2 12h2"/>
-                    <path d="M20 12h2"/>
-                    <path d="m6.34 17.66-1.41 1.41"/>
-                    <path d="m19.07 4.93-1.41 1.42"/>
-                </svg>
-                <svg data-theme="dark" class="img" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="var(--c-white)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <path d="M20.5 14.1A8.5 8.5 0 0 1 9.9 3.5a8.5 8.5 0 1 0 10.6 10.6Z"/>
-                </svg>
-            </div>
         </div>
     </header>
     <main class="main">
@@ -90,7 +63,8 @@
                 </a>
             </div>
         </section>
-        <section class="specialists section-spacing" id="specialists">
+        <section class="specialists section-spacing">
+            <div class="anchor" id="specialists"></div>
             <div class="specialists__container container">
                 <h2 class="section-header">
                     Nasi <span class="color-accent">specjaliści</span>
@@ -164,6 +138,7 @@
             </div>
         </section>
         <section class="about bg-dark section-spacing">
+            <div class="anchor" id="about"></div>
             <div class="about__container container container--50">
                 <div class="about__left">
                     <img class="about__img img" src="images/o-nas.png" alt="O nas" width="1536" height="1024" loading="lazy" fetchpriority="low">
@@ -176,7 +151,7 @@
                         Tworzymy zespół, który realnie
                         rozwiązuje problemy na budowie.
                     </h3>
-                    <div class="about__descripition">
+                    <div class="about__description">
                         <p>
                             Power Synergy Team to ludzie z praktycznym doświadczeniem,
                             którzy rozumieją realia pracy w terenie. Łączymy specjalistów z różnych
@@ -193,7 +168,8 @@
             </div>
         </section>
         <section class="qualifications section-spacing">
-            <div class="qualifications__container container container--50">
+            <div class="anchor" id="qualifications"></div>
+            <div class="qualifications__container container">
                 <div class="qualifications__left">
                     <h2 class="qualifications__header section-header">
                         Kwalifikacje <span class="color-accent">bez granic</span>
@@ -263,21 +239,22 @@
                                 <path d="M38 3V73" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
                                 <path d="M3 38H73" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
                             </svg>
-                            <div class="qualifications__item-title">Praca w całej UE</div>
+                            <div class="qualifications__item-title">Praca na terenie całej UE</div>
                             <div class="qualifications__item-descrition">mobilność na terenie Unii Europejskiej</div>
                         </div>
                     </div>
                 </div>
                 <div class="qualifications__right">
-                    <img src="images/europe-yellow.svg" alt="" width="702" height="665" loading="lazy" fetchpriority="low">
+                    <img class="qualifications__img" src="images/europe-yellow.svg" alt="" width="702" height="665" loading="lazy" fetchpriority="low">
                 </div>
             </div>
         </section>
         <section class="contact bg-dark section-spacing">
+            <div class="anchor" id="contact"></div>
             <div class="contact__container container container--50">
                 <div class="contact__left">
                     <h2 class="contact__header section-header">
-                        Kwalifikacje <span class="color-accent">bez granic</span>
+                        Skontaktuj się z <span class="color-accent">nami</span>
                     </h2>
                     <form class="contact__form" id="contact-form">
                         <label class="form-label" for="name">Imię i nazwisko*</label>
@@ -294,6 +271,14 @@
 
                         <label class="form-label" for="message">Wiadomość / Opisz swoje potrzeby*</label>
                         <textarea id="message" name="message" placeholder="Wiadomość / Opisz swoje potrzeby*" required></textarea>
+                        <div class="contact__wrap">
+                            <input type="checkbox" name="consent" id="consent">
+                            <label for="consent">
+                                Wyrażam zgodę na przetwarzanie moich danych osobowych
+                                w celu odpowiedzi na zapytanie. *
+                            </label>
+                        </div>
+                        <button type="submit">Wyślij wiadomość</button>
                     </form>
                 </div>
                 <div class="contact__right">

@@ -1,13 +1,4 @@
 document.addEventListener("DOMContentLoaded", function(){
-    const themeBtn = document.querySelector('.header__theme');
-    if (themeBtn) {
-        const html = document.documentElement;
-        themeBtn.addEventListener('click', () => {
-            const theme = html.dataset.theme === 'dark' ? 'light' : 'dark';
-            html.dataset.theme = theme;
-            localStorage.setItem('theme', theme);
-        });
-    }
     const languageBtn = document.querySelector(".header__language");
     if (languageBtn) {
         languageBtn.addEventListener("click", function () {
