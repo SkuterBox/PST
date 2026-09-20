@@ -1,0 +1,63 @@
+.hero {
+    margin-top: -6.125em;
+    position: relative;
+    background: linear-gradient(90deg, rgba(5, 28, 43, 0.90) 0%, rgba(5, 28, 43, 0.62) 64%, rgba(5, 28, 43, 0.28) 100%);
+    &__img {
+        position: relative;
+        z-index: -3;
+    }
+    &__header {
+        margin: 0;
+        padding: 0;
+        font-size: clamp(2.5rem, 1.9034rem + 2.6515vw, 4.25rem);
+        text-transform: uppercase;
+        font-weight: 700;
+        span {
+            display: block;
+        }
+    }
+    &__description {
+        font-size: clamp(1rem, 0.8295rem + 0.7576vw, 1.5rem);
+        max-width: 25em;
+        line-height: 1.6em;
+        margin: clamp(1.25rem, 0.9943rem + 1.1364vw, 2rem) 0 clamp(1.25rem, 0.9091rem + 1.5152vw, 2.25rem);
+        padding: 0;
+    }
+    &__btn {
+        text-decoration: none;
+        background-color: var(--c-accent);
+        color: var(--c-black);
+        display: inline-flex;
+        white-space: nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        font-size: clamp(0.875rem, 0.7898rem + 0.3788vw, 1.125rem);
+        padding: 0.75em 2em;
+        border-radius: 4px;
+        gap: 0.75em;
+        font-weight: 700;
+        text-transform: uppercase;
+        svg {
+            width: 100%;
+            flex-shrink: 0;
+            max-width: clamp(0.875rem, 0.7898rem + 0.3788vw, 1.125rem);
+        }
+    }
+    &__container {
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: flex-start;
+        left: 0;
+        right: 0;
+        margin: auto;
+        color: var(--c-white);
+    }
+}

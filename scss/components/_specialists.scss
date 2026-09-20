@@ -1,0 +1,32 @@
+.specialists {
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: clamp(1rem, 0.6591rem + 1.5152vw, 2rem);
+    }
+    &__item {
+        padding: clamp(1rem, 0.6591rem + 1.5152vw, 2rem) clamp(1rem, 0.8295rem + 0.7576vw, 1.5rem);
+        background-color: var(--bg-item);
+        text-align: center;
+        box-shadow: var(--bs-main);
+        &-image {
+            aspect-ratio: 280/170;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+        &-img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+        }
+        &-header {
+            margin: 1.5em 0 0;
+            padding: 0;
+            font-size: clamp(1.125rem, 0.9972rem + 0.5682vw, 1.5rem);
+        }
+    }
+}

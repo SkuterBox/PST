@@ -1,0 +1,90 @@
+.header {
+    position: sticky;
+    z-index: 9;
+    top: 0;
+    padding: 0.5em 0;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: 0;
+        box-shadow: var(--bs-header);
+        z-index: 1;
+        pointer-events: none;
+    }
+    &__container {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        container-type: inline-size;
+        gap: clamp(1.5rem, 0.9886rem + 2.2727vw, 3rem);
+        position: relative;
+        z-index: 3;
+    }
+    &-logo {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        gap: 3em;
+        &__img {
+            max-width: 300px;
+        }
+        &__text {
+            display: grid;
+            gap: 0.25em;
+            position: relative;
+            span {
+                color: var(--c-white);
+                display: block;
+                font-weight: 500;
+            }
+            &:before {
+                content: "";
+                left: -1.5em;
+                top: 0;
+                bottom: 0;
+                width: 1px;
+                background-color: var(--c-white);
+                position: absolute;
+            }
+        }
+    }
+    &-menu {
+        display: flex;
+        justify-self: flex-end;
+        align-items: center;
+        align-content: center;
+        gap: clamp(1.5rem, 0.9886rem + 2.2727vw, 3rem);
+        padding: 0;
+        margin: 0 0 0 auto;
+        list-style: none;
+        &__item {
+            font-weight: 700;
+            a {
+                color: var(--c-white);
+                text-decoration: none;
+            }
+            &--contact {
+                a {
+                    background-color: var(--c-accent);
+                    color: var(--c-black);
+                    display: inline-flex;
+                    white-space: nowrap;
+                    justify-content: center;
+                    align-content: center;
+                    align-items: center;
+                    padding: 0.45em 1em;
+                    border-radius: 4px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    &__theme {
+        margin-right: 0;
+        color: var(--c-white);
+    }
+}

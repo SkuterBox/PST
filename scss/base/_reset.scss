@@ -1,0 +1,26 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    color: var(--c-text);
+    background-color: var(--bg-main);
+    max-width: 120em;
+    margin: 0 auto;
+}
+
+*,
+input,
+textarea {
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
