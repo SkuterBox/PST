@@ -3,6 +3,12 @@
         display: flex;
         flex-wrap: wrap;
         gap: 1.5em;
+        &-description {
+            font-size: 12px;
+            text-align: center;
+            width: 100%;
+            opacity: 0.7;
+        }
     }
     &__wrap {
         margin: 0.75em 0 1.75em;
