@@ -82,28 +82,46 @@
                 <span>Realne efekty</span>
             </div>
         </div>
-        <ul class="header-menu">
-            <li class="header-menu__item">
-                <a href="#specialists">
-                    Nasi specjaliści
-                </a>
-            </li>
-            <li class="header-menu__item">
-                <a href="#about">
-                    O nas
-                </a>
-            </li>
-            <li class="header-menu__item">
-                <a href="#qualifications">
-                    Kwalifikacje
-                </a>
-            </li>
-            <li class="header-menu__item header-menu__item--contact">
-                <a href="#contact">
-                    Kontakt
-                </a>
-            </li>
-        </ul>
+        <div class="header__burger" id="header-navigation">
+            <ul class="header-menu">
+                <li class="header-menu__item">
+                    <a href="#specialists">
+                        Nasi specjaliści
+                    </a>
+                </li>
+                <li class="header-menu__item">
+                    <a href="#about">
+                        O nas
+                    </a>
+                </li>
+                <li class="header-menu__item">
+                    <a href="#qualifications">
+                        Kwalifikacje
+                    </a>
+                </li>
+                <li class="header-menu__item header-menu__item--contact">
+                    <a href="#contact">
+                        Kontakt
+                    </a>
+                </li>
+            </ul>
+            <div class="header__language">
+                <button class="header__language-active" type="button" aria-expanded="false" aria-controls="language-list" data-language="Język: ">PL</button>
+                <div class="header__languages" id="language-list" data-back="Powrót">
+                    <a href="/" class="header__languages-item active" title="Polski" aria-label="Polski" aria-current="page">Polski</a>
+                    <a href="/de/" class="header__languages-item" title="Deutsch" aria-label="Deutsch">Deutsch</a>
+                    <a href="/en/" class="header__languages-item" title="English" aria-label="English">English</a>
+                    <a href="/nl/" class="header__languages-item" title="Nederlands" aria-label="Nederlands">Nederlands</a>
+                    <a href="/fr/" class="header__languages-item" title="Français" aria-label="Français">Français</a>
+                    <a href="/ru/" class="header__languages-item" title="Русский" aria-label="Русский">Русский</a>
+                </div>
+            </div>
+        </div>
+        <button class="header__burger-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="header-navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
 </header>
 
@@ -320,15 +338,6 @@
                     </div>
 
                     <div class="qualifications__item">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 76" fill="none">
-                            <path d="M32 3C24 9 15 11 4 11V38C4 54 14 65 32 73C50 65 60 54 60 38V11C49 11 40 9 32 3Z" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M19 37L28 46L46 27" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <div class="qualifications__item-title">Bezpieczna realizacja</div>
-                        <div class="qualifications__item-description">zgodnie z obowiązującymi przepisami i normami</div>
-                    </div>
-
-                    <div class="qualifications__item">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 76" fill="none">
                             <circle cx="38" cy="38" r="35" stroke="currentColor" stroke-width="6"/>
                             <path d="M38 12V38L20 48.5" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -347,6 +356,15 @@
                         </svg>
                         <div class="qualifications__item-title">Elastyczna współpraca</div>
                         <div class="qualifications__item-description">krótkie i długoterminowe projekty</div>
+                    </div>
+
+                    <div class="qualifications__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 76" fill="none">
+                            <path d="M32 3C24 9 15 11 4 11V38C4 54 14 65 32 73C50 65 60 54 60 38V11C49 11 40 9 32 3Z" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19 37L28 46L46 27" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div class="qualifications__item-title">Bezpieczna realizacja</div>
+                        <div class="qualifications__item-description">zgodnie z obowiązującymi przepisami i normami</div>
                     </div>
 
                     <div class="qualifications__item">
@@ -407,7 +425,7 @@
                     </div>
 
                     <div class="contact__form-description">
-                        Wysyłając wiadomość, wyrażasz zgodę na przetwarzanie podanych danych w celu obsługi Twojego zapytania.
+                        Podane dane wykorzystamy wyłącznie w celu obsługi Twojego zapytania. Szczegóły dotyczące przetwarzania danych znajdziesz w <a href="/polityka-prywatnosci.html">Polityce prywatności</a>.
                     </div>
                 </form>
             </div>

@@ -40,6 +40,7 @@
     position: relative;
     padding-bottom: 0.5em;
     margin: 0 0 1em;
+    text-wrap: balance;
     &:after {
         content: "";
         background-color: var(--c-accent);

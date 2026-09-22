@@ -84,28 +84,46 @@
                 <span>Реальный результат</span>
             </div>
         </div>
-        <ul class="header-menu">
-            <li class="header-menu__item">
-                <a href="#specialists">
-                    Наши специалисты
-                </a>
-            </li>
-            <li class="header-menu__item">
-                <a href="#about">
-                    О нас
-                </a>
-            </li>
-            <li class="header-menu__item">
-                <a href="#qualifications">
-                    Квалификация
-                </a>
-            </li>
-            <li class="header-menu__item header-menu__item--contact">
-                <a href="#contact">
-                    Контакты
-                </a>
-            </li>
-        </ul>
+        <div class="header__burger" id="header-navigation">
+            <ul class="header-menu">
+                <li class="header-menu__item">
+                    <a href="#specialists">
+                        Наши специалисты
+                    </a>
+                </li>
+                <li class="header-menu__item">
+                    <a href="#about">
+                        О нас
+                    </a>
+                </li>
+                <li class="header-menu__item">
+                    <a href="#qualifications">
+                        Квалификация
+                    </a>
+                </li>
+                <li class="header-menu__item header-menu__item--contact">
+                    <a href="#contact">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+            <div class="header__language">
+                <button class="header__language-active" type="button" aria-expanded="false" aria-controls="language-list" data-language="Язык: ">RU</button>
+                <div class="header__languages" id="language-list" data-back="Назад">
+                    <a href="/" class="header__languages-item" title="Polski" aria-label="Polski">Polski</a>
+                    <a href="/de/" class="header__languages-item" title="Deutsch" aria-label="Deutsch">Deutsch</a>
+                    <a href="/en/" class="header__languages-item" title="English" aria-label="English">English</a>
+                    <a href="/nl/" class="header__languages-item" title="Nederlands" aria-label="Nederlands">Nederlands</a>
+                    <a href="/fr/" class="header__languages-item" title="Français" aria-label="Français">Français</a>
+                    <a href="/ru/" class="header__languages-item active" title="Русский" aria-label="Русский" aria-current="page">Русский</a>
+                </div>
+            </div>
+        </div>
+        <button class="header__burger-btn" type="button" aria-label="Меню" aria-expanded="false" aria-controls="header-navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
 </header>
 
@@ -180,7 +198,7 @@
                         <img class="specialists__item-img img" src="images/mini-zuraw.png" alt="Мини-кран" width="1374" height="1145" loading="lazy" fetchpriority="low">
                     </div>
                     <h3 class="specialists__item-header">
-                        Мини-краны
+                        Мини&#8209;краны
                     </h3>
                 </div>
 
@@ -189,7 +207,7 @@
                         <img class="specialists__item-img img" src="images/hds.png" alt="Кран-манипулятор" width="1536" height="1024" loading="lazy" fetchpriority="low">
                     </div>
                     <h3 class="specialists__item-header">
-                        Краны-манипуляторы
+                        Краны&#8209;манипуляторы
                     </h3>
                 </div>
 
@@ -317,17 +335,8 @@
                             <path d="M161,80a32,32,0,1,1,31,40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
                             <path d="M64,120A32,32,0,1,1,95,80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
                         </svg>
-                        <div class="qualifications__item-title">Квалифицированный персонал</div>
+                        <div class="qualifications__item-title">Подготовленный персонал</div>
                         <div class="qualifications__item-description">квалификация и опыт</div>
-                    </div>
-
-                    <div class="qualifications__item">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 76" fill="none">
-                            <path d="M32 3C24 9 15 11 4 11V38C4 54 14 65 32 73C50 65 60 54 60 38V11C49 11 40 9 32 3Z" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M19 37L28 46L46 27" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <div class="qualifications__item-title">Безопасное выполнение работ</div>
-                        <div class="qualifications__item-description">в соответствии с действующими требованиями и нормами</div>
                     </div>
 
                     <div class="qualifications__item">
@@ -349,6 +358,15 @@
                         </svg>
                         <div class="qualifications__item-title">Гибкие условия сотрудничества</div>
                         <div class="qualifications__item-description">краткосрочные и долгосрочные проекты</div>
+                    </div>
+
+                    <div class="qualifications__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 76" fill="none">
+                            <path d="M32 3C24 9 15 11 4 11V38C4 54 14 65 32 73C50 65 60 54 60 38V11C49 11 40 9 32 3Z" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19 37L28 46L46 27" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div class="qualifications__item-title">Безопасное выполнение работ</div>
+                        <div class="qualifications__item-description">в соответствии с действующими требованиями и нормами</div>
                     </div>
 
                     <div class="qualifications__item">

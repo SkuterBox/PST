@@ -1,26 +1,59 @@
 document.addEventListener("DOMContentLoaded", function(){
     const languageBtn = document.querySelector(".header__language");
-    if (languageBtn) {
-        languageBtn.addEventListener("click", function () {
-            languageBtn.classList.toggle("open");
+    const languageToggle = document.querySelector(".header__language-active");
+    const languagesList = document.querySelector(".header__languages");
+    const burgerBtn = document.querySelector(".header__burger-btn");
+    const burgerMenu = document.querySelector(".header__burger");
+
+    function setLanguageOpen(isOpen) {
+        if (!languageBtn || !languageToggle) return;
+        languageBtn.classList.toggle("open", isOpen);
+        languageToggle.setAttribute("aria-expanded", String(isOpen));
+    }
+
+    function setBurgerOpen(isOpen) {
+        if (!burgerBtn || !burgerMenu) return;
+        burgerMenu.classList.toggle("open", isOpen);
+        burgerBtn.setAttribute("aria-expanded", String(isOpen));
+        if (!isOpen) setLanguageOpen(false);
+    }
+
+    if (languageToggle) {
+        languageToggle.addEventListener("click", function () {
+            setLanguageOpen(!languageBtn.classList.contains("open"));
         });
     }
-    const languagesList = document.querySelector(".header__languages");
-    if (languagesList) {
+    if (languagesList && languageBtn) {
         languagesList.addEventListener("click", function (e) {
             e.stopPropagation();
             if (e.target.classList.contains("header__languages")) {
-                languageBtn.classList.remove("open");
+                setLanguageOpen(false);
             }
-        })
-    }
-    const burgerBtn = document.querySelector(".header__burger-btn");
-    const burgerMenu = document.querySelector(".header__burger");
-    if (burgerBtn && burgerMenu) {
-        burgerBtn.addEventListener("click", function(){
-            burgerMenu.classList.toggle("open");
         });
     }
+    if (burgerBtn && burgerMenu) {
+        burgerBtn.addEventListener("click", function(){
+            setBurgerOpen(!burgerMenu.classList.contains("open"));
+        });
+
+        burgerMenu.querySelectorAll(".header-menu a").forEach(function(link) {
+            link.addEventListener("click", function() {
+                setBurgerOpen(false);
+            });
+        });
+    }
+
+    document.addEventListener("click", function(e) {
+        if (languageBtn && !languageBtn.contains(e.target)) {
+            setLanguageOpen(false);
+        }
+    });
+
+    document.addEventListener("keydown", function(e) {
+        if (e.key !== "Escape") return;
+        setLanguageOpen(false);
+        setBurgerOpen(false);
+    });
 
     const contactForm = document.querySelector("#contact-form");
     if (contactForm) {
