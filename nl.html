@@ -397,23 +397,38 @@
                     Neem <span class="color-accent">contact op</span>
                 </h2>
 
-                <form class="contact__form" id="contact-form">
+                <form class="contact__form contact__form--disabled" id="contact-form"
+                      data-phone-error="Voer een geldig telefoonnummer in."
+                      data-sending-label="Verzenden..."
+                      data-success-label="Bericht verzonden"
+                      data-retry-label="Opnieuw proberen">
                     <label class="form-label" for="name">Naam en achternaam*</label>
-                    <input id="name" type="text" name="name" placeholder="Naam en achternaam*" required>
+                    <input id="name" type="text" name="q8_imieI" placeholder="Naam en achternaam*" required>
 
                     <label class="form-label" for="firm">Bedrijf</label>
-                    <input id="firm" type="text" name="firm" placeholder="Bedrijf">
+                    <input id="firm" type="text" name="q3_q3_textbox1" placeholder="Bedrijf">
 
                     <label class="form-label" for="email">E-mailadres*</label>
-                    <input id="email" type="email" name="email" placeholder="E-mailadres*" required>
+                    <input id="email" type="email" name="q4_q4_email2" placeholder="E-mailadres*" required>
 
                     <label class="form-label" for="phone">Telefoonnummer*</label>
-                    <input id="phone" type="tel" name="phone" autocomplete="tel" placeholder="Telefoonnummer*" required>
+                    <input id="phone" type="tel" name="q5_q5_phone3[full]" autocomplete="tel" placeholder="Telefoonnummer*" required>
 
                     <label class="form-label" for="message">Bericht / omschrijf uw behoefte*</label>
-                    <textarea id="message" name="message" placeholder="Bericht / omschrijf uw behoefte*" required></textarea>
+                    <textarea id="message" name="q6_q6_textarea4" placeholder="Bericht / omschrijf uw behoefte*" required></textarea>
 
-                    <button type="submit">Bericht verzenden</button>
+                    <input type="hidden" name="formID" value="262635650041047">
+                    <input type="hidden" name="q10_wersjaJezykowa" value="NL">
+
+                    <div class="contact__form-actions contact__form-actions--disabled">
+                        <div class="contact__captcha"
+                             id="recaptcha_input_9"
+                             hidden
+                             data-lazy-recaptcha
+                             data-sitekey="6LdU3CgUAAAAAB0nnFM3M3T0sy707slYYU51RroJ"></div>
+                        <input type="hidden" id="input_9" name="recaptcha_visible" required>
+                        <button type="submit" aria-live="polite" aria-disabled="true" disabled>Bericht verzenden</button>
+                    </div>
 
                     <div class="contact__form-description">
                         Door dit bericht te verzenden, stemt u in met de verwerking van de verstrekte gegevens voor de behandeling van uw aanvraag.

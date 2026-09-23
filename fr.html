@@ -397,23 +397,38 @@
                     Nous <span class="color-accent">contacter</span>
                 </h2>
 
-                <form class="contact__form" id="contact-form">
+                <form class="contact__form contact__form--disabled" id="contact-form"
+                      data-phone-error="Saisissez un numéro de téléphone valide."
+                      data-sending-label="Envoi en cours..."
+                      data-success-label="Message envoyé"
+                      data-retry-label="Réessayer">
                     <label class="form-label" for="name">Nom et prénom*</label>
-                    <input id="name" type="text" name="name" placeholder="Nom et prénom*" required>
+                    <input id="name" type="text" name="q8_imieI" placeholder="Nom et prénom*" required>
 
                     <label class="form-label" for="firm">Entreprise</label>
-                    <input id="firm" type="text" name="firm" placeholder="Entreprise">
+                    <input id="firm" type="text" name="q3_q3_textbox1" placeholder="Entreprise">
 
                     <label class="form-label" for="email">Adresse e-mail*</label>
-                    <input id="email" type="email" name="email" placeholder="Adresse e-mail*" required>
+                    <input id="email" type="email" name="q4_q4_email2" placeholder="Adresse e-mail*" required>
 
                     <label class="form-label" for="phone">Numéro de téléphone*</label>
-                    <input id="phone" type="tel" name="phone" autocomplete="tel" placeholder="Numéro de téléphone*" required>
+                    <input id="phone" type="tel" name="q5_q5_phone3[full]" autocomplete="tel" placeholder="Numéro de téléphone*" required>
 
                     <label class="form-label" for="message">Message / décrivez vos besoins*</label>
-                    <textarea id="message" name="message" placeholder="Message / décrivez vos besoins*" required></textarea>
+                    <textarea id="message" name="q6_q6_textarea4" placeholder="Message / décrivez vos besoins*" required></textarea>
 
-                    <button type="submit">Envoyer le message</button>
+                    <input type="hidden" name="formID" value="262635650041047">
+                    <input type="hidden" name="q10_wersjaJezykowa" value="FR">
+
+                    <div class="contact__form-actions contact__form-actions--disabled">
+                        <div class="contact__captcha"
+                             id="recaptcha_input_9"
+                             hidden
+                             data-lazy-recaptcha
+                             data-sitekey="6LdU3CgUAAAAAB0nnFM3M3T0sy707slYYU51RroJ"></div>
+                        <input type="hidden" id="input_9" name="recaptcha_visible" required>
+                        <button type="submit" aria-live="polite" aria-disabled="true" disabled>Envoyer le message</button>
+                    </div>
 
                     <div class="contact__form-description">
                         En envoyant ce message, vous consentez au traitement des informations fournies afin de répondre à votre demande.

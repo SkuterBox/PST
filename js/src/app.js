@@ -61,6 +61,14 @@ document.addEventListener("DOMContentLoaded", function(){
         const submitButton = contactForm.querySelector('button[type="submit"]');
         const captchaContainer = contactForm.querySelector("[data-lazy-recaptcha]");
         const captchaInput = contactForm.querySelector('[name="recaptcha_visible"]');
+
+        if (!submitButton || submitButton.disabled || !contactForm.hasAttribute("action")) {
+            contactForm.addEventListener("submit", function(e) {
+                e.preventDefault();
+            });
+            return;
+        }
+
         let recaptchaScriptPromise;
         let recaptchaWidgetId = null;
 
@@ -179,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
         function validatePhone() {
             const isValid = isValidPhone(phoneInput.value);
-            phoneInput.setCustomValidity(isValid ? "" : "Podaj prawidłowy numer telefonu.");
+            phoneInput.setCustomValidity(isValid ? "" : contactForm.dataset.phoneError);
             return isValid;
         }
 
@@ -209,7 +217,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
             submitButton.disabled = true;
             submitButton.classList.remove("is-error", "is-success");
-            submitButton.textContent = "Wysyłanie...";
+            submitButton.textContent = contactForm.dataset.sendingLabel;
 
             try {
                 const response = await fetch(contactForm.action, {
@@ -225,12 +233,12 @@ document.addEventListener("DOMContentLoaded", function(){
                 contactForm.reset();
                 captchaInput.value = "";
                 if (recaptchaWidgetId !== null) window.grecaptcha.reset(recaptchaWidgetId);
-                submitButton.textContent = "Wiadomość wysłana";
+                submitButton.textContent = contactForm.dataset.successLabel;
                 submitButton.classList.add("is-success");
             }
             catch (error) {
                 submitButton.disabled = false;
-                submitButton.textContent = "Spróbuj ponownie";
+                submitButton.textContent = contactForm.dataset.retryLabel;
                 submitButton.classList.add("is-error");
                 captchaInput.value = "";
                 if (recaptchaWidgetId !== null) window.grecaptcha.reset(recaptchaWidgetId);

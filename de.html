@@ -397,23 +397,38 @@
                     Kontakt <span class="color-accent">aufnehmen</span>
                 </h2>
 
-                <form class="contact__form" id="contact-form">
+                <form class="contact__form contact__form--disabled" id="contact-form"
+                      data-phone-error="Geben Sie eine gültige Telefonnummer ein."
+                      data-sending-label="Wird gesendet..."
+                      data-success-label="Nachricht gesendet"
+                      data-retry-label="Erneut versuchen">
                     <label class="form-label" for="name">Vor- und Nachname*</label>
-                    <input id="name" type="text" name="name" placeholder="Vor- und Nachname*" required>
+                    <input id="name" type="text" name="q8_imieI" placeholder="Vor- und Nachname*" required>
 
                     <label class="form-label" for="firm">Unternehmen</label>
-                    <input id="firm" type="text" name="firm" placeholder="Unternehmen">
+                    <input id="firm" type="text" name="q3_q3_textbox1" placeholder="Unternehmen">
 
                     <label class="form-label" for="email">E-Mail-Adresse*</label>
-                    <input id="email" type="email" name="email" placeholder="E-Mail-Adresse*" required>
+                    <input id="email" type="email" name="q4_q4_email2" placeholder="E-Mail-Adresse*" required>
 
                     <label class="form-label" for="phone">Telefonnummer*</label>
-                    <input id="phone" type="tel" name="phone" autocomplete="tel" placeholder="Telefonnummer*" required>
+                    <input id="phone" type="tel" name="q5_q5_phone3[full]" autocomplete="tel" placeholder="Telefonnummer*" required>
 
                     <label class="form-label" for="message">Nachricht / Anforderungen beschreiben*</label>
-                    <textarea id="message" name="message" placeholder="Nachricht / Anforderungen beschreiben*" required></textarea>
+                    <textarea id="message" name="q6_q6_textarea4" placeholder="Nachricht / Anforderungen beschreiben*" required></textarea>
 
-                    <button type="submit">Nachricht senden</button>
+                    <input type="hidden" name="formID" value="262635650041047">
+                    <input type="hidden" name="q10_wersjaJezykowa" value="DE">
+
+                    <div class="contact__form-actions contact__form-actions--disabled">
+                        <div class="contact__captcha"
+                             id="recaptcha_input_9"
+                             hidden
+                             data-lazy-recaptcha
+                             data-sitekey="6LdU3CgUAAAAAB0nnFM3M3T0sy707slYYU51RroJ"></div>
+                        <input type="hidden" id="input_9" name="recaptcha_visible" required>
+                        <button type="submit" aria-live="polite" aria-disabled="true" disabled>Nachricht senden</button>
+                    </div>
 
                     <div class="contact__form-description">
                         Mit dem Absenden dieser Nachricht stimmen Sie der Verarbeitung der angegebenen Informationen zur Bearbeitung Ihrer Anfrage zu.
