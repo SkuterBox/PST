@@ -1,10 +1,13 @@
 @import "base/typography";
+@import "base/classes";
 @import "layout/header";
+@import "layout/footer";
 
 :root {
     color-scheme: dark;
     --font-main: Inter, Arial, sans-serif;
     --c-text: #ffffff;
+    --c-white: #ffffff;
     --c-black: #1a1b1c;
     --bg-main: #1a1b1c;
     --bg-dark: #061C2B;
