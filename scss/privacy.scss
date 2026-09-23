@@ -1,5 +1,4 @@
 @import "base/typography";
-@import "base/classes";
 @import "layout/header";
 @import "layout/footer";
 
@@ -41,6 +40,21 @@ body {
     max-width: 90em;
     margin: 0 auto;
     padding: 0 .75em;
+}
+
+.img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.bg-dark {
+    background-color: var(--bg-dark);
+    color: var(--c-white);
+}
+
+.section-spacing {
+    padding: clamp(2rem, 1.3182rem + 3.0303vw, 4rem) 0;
 }
 
 a {
