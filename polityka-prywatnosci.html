@@ -17,21 +17,21 @@
 
         <meta name="theme-color" content="#061C2B">
 
-        <link rel="canonical" href="https://powersynergyteam.com/polityka-prywatnosci.html">
+        <link rel="canonical" href="https://powersynergyteam.com/polityka-prywatnosci">
 
-        <link rel="alternate" hreflang="x-default" href="https://powersynergyteam.com/polityka-prywatnosci.html">
-        <link rel="alternate" hreflang="pl" href="https://powersynergyteam.com/polityka-prywatnosci.html">
-        <link rel="alternate" hreflang="en" href="https://powersynergyteam.com/privacy.html">
-        <link rel="alternate" hreflang="de" href="https://powersynergyteam.com/datenschutz.html">
-        <link rel="alternate" hreflang="nl-NL" href="https://powersynergyteam.com/privacybeleid.html">
-        <link rel="alternate" hreflang="fr" href="https://powersynergyteam.com/politique-de-confidentialite.html">
-        <link rel="alternate" hreflang="ru" href="https://powersynergyteam.com/politika-konfidencialnosti.html">
+        <link rel="alternate" hreflang="x-default" href="https://powersynergyteam.com/polityka-prywatnosci">
+        <link rel="alternate" hreflang="pl" href="https://powersynergyteam.com/polityka-prywatnosci">
+        <link rel="alternate" hreflang="en" href="https://powersynergyteam.com/privacy">
+        <link rel="alternate" hreflang="de" href="https://powersynergyteam.com/datenschutz">
+        <link rel="alternate" hreflang="nl-NL" href="https://powersynergyteam.com/privacybeleid">
+        <link rel="alternate" hreflang="fr" href="https://powersynergyteam.com/politique-de-confidentialite">
+        <link rel="alternate" hreflang="ru" href="https://powersynergyteam.com/politika-konfidencialnosti">
 
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="Power Synergy Team">
         <meta property="og:title" content="Polityka prywatności - Power Synergy Team">
         <meta property="og:description" content="Informacje o przetwarzaniu danych osobowych i zasadach prywatności w serwisie Power Synergy Team.">
-        <meta property="og:url" content="https://powersynergyteam.com/polityka-prywatnosci.html">
+        <meta property="og:url" content="https://powersynergyteam.com/polityka-prywatnosci">
         <meta property="og:locale" content="pl_PL">
         <meta property="og:image" content="https://powersynergyteam.com/images/og.jpg">
         <meta property="og:image:secure_url" content="https://powersynergyteam.com/images/og.jpg">
@@ -45,7 +45,7 @@
         <meta name="twitter:description" content="Informacje o przetwarzaniu danych osobowych i zasadach prywatności w serwisie Power Synergy Team.">
         <meta name="twitter:image" content="https://powersynergyteam.com/images/og.jpg">
 
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/privacy.css">
 
         <script type="application/ld+json">
             {
@@ -72,7 +72,61 @@
         </script>
     </head>
 <body>
-    <main class="container">
+    <header class="header">
+        <div class="header__container container">
+            <div class="header-logo">
+                <a href="/">
+                    <img class="header-logo__img img" src="images/logo.png" alt="Power Synergy Team" loading="eager" fetchpriority="high">
+                </a>
+                <div class="header-logo__text">
+                    <span>Ludzie</span>
+                    <span>Maszyny</span>
+                    <span>Realne efekty</span>
+                </div>
+            </div>
+            <div class="header__burger" id="header-navigation">
+                <ul class="header-menu">
+                    <li class="header-menu__item">
+                        <a href="/#specialists">
+                            Nasi specjaliści
+                        </a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="/#about">
+                            O nas
+                        </a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="/#qualifications">
+                            Kwalifikacje
+                        </a>
+                    </li>
+                    <li class="header-menu__item header-menu__item--contact">
+                        <a href="/#contact">
+                            Kontakt
+                        </a>
+                    </li>
+                </ul>
+                <div class="header__language">
+                    <button class="header__language-active" type="button" aria-expanded="false" aria-controls="language-list" data-language="Język: ">PL</button>
+                    <div class="header__languages" id="language-list" data-back="Powrót">
+                        <a href="/" class="header__languages-item active" title="Polski" aria-label="Polski" aria-current="page">Polski</a>
+                        <a href="/de/" class="header__languages-item" title="Deutsch" aria-label="Deutsch">Deutsch</a>
+                        <a href="/en/" class="header__languages-item" title="English" aria-label="English">English</a>
+                        <a href="/nl/" class="header__languages-item" title="Nederlands" aria-label="Nederlands">Nederlands</a>
+                        <a href="/fr/" class="header__languages-item" title="Français" aria-label="Français">Français</a>
+                        <a href="/ru/" class="header__languages-item" title="Русский" aria-label="Русский">Русский</a>
+                    </div>
+                </div>
+            </div>
+            <button class="header__burger-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="header-navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <main class="main container">
         <h1>Polityka prywatności</h1>
 
         <h2>1. Administrator danych</h2>
@@ -166,7 +220,7 @@
 
         <p>Polityka prywatności może być aktualizowana w przypadku zmian sposobu działania serwisu, wykorzystywanych usług lub obowiązujących przepisów prawa.</p>
     </main>
-
+    <script src="js/app.min.js"></script>
 </body>
 
 </html>

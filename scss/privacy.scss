@@ -1,0 +1,50 @@
+@import "base/typography";
+@import "layout/header";
+
+:root {
+    color-scheme: dark;
+    --font-main: Inter, Arial, sans-serif;
+    --c-text: #ffffff;
+    --c-black: #1a1b1c;
+    --bg-main: #1a1b1c;
+    --bg-dark: #061C2B;
+    --c-accent: #FFC400;
+    --bs-header: 0 0 164px 82px rgb(26, 27, 28);
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    font-family: var(--font-main);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    line-height: 1.6;
+}
+
+body {
+    padding: 0;
+    color: var(--c-text);
+    background-color: var(--bg-main);
+    max-width: 120em;
+    margin: 0 auto;
+}
+.container {
+    max-width: 90em;
+    margin: 0 auto;
+    padding: 0 .75em;
+}
+
+a {
+    color: var(--c-accent);
+}
+
+.main {
+    padding-top: 3em;
+    padding-bottom: 8em;
+}
