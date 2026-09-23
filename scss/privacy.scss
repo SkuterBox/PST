@@ -1,4 +1,11 @@
 @import "base/typography";
+
+.img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 @import "layout/header";
 @import "layout/footer";
 
@@ -40,12 +47,6 @@ body {
     max-width: 90em;
     margin: 0 auto;
     padding: 0 .75em;
-}
-
-.img {
-    display: block;
-    max-width: 100%;
-    height: auto;
 }
 
 .bg-dark {
