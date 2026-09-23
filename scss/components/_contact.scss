@@ -1,4 +1,13 @@
 .contact {
+    position: relative;
+    @media(max-width: 1199px) {
+        padding: clamp(5rem, -4rem + 18.75vw, 8rem) 0;
+    }
+    &__container {
+        @media(max-width: 1199px) {
+            grid-template-columns: 1fr;
+        }
+    }
     &__form {
         display: flex;
         flex-wrap: wrap;
@@ -7,7 +16,14 @@
             font-size: 12px;
             text-align: center;
             width: 100%;
-            opacity: 0.7;
+            text-wrap: balance;
+            @media(min-width: 1200px) {
+                opacity: 0.7;
+            }
+            a {
+                color: var(--c-accent);
+                font-weight: 700;
+            }
         }
         &-actions {
             display: flex;
@@ -45,13 +61,15 @@
     input[type="email"],
     input[type="tel"] {
         width: 100%;
-        max-width: calc(50% - 0.75rem);
         font-size: 1rem;
         padding: 0.875em 1em;
         background-color: transparent;
         color: var(--c-white);
         border: 1px solid rgba(255, 255, 255, 0.70);
         border-radius: 4px;
+        @media(min-width: 576px) {
+            max-width: calc(50% - 0.75rem);
+        }
         &::placeholder {
             opacity: 1;
             color: var(--c-white);
@@ -97,12 +115,24 @@
     }
     &__right {
         height: 100%;
+        @media(max-width: 1199px) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0.1;
+            height: auto;
+        }
         img {
             border-radius: 8px;
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: right center;
+            @media(max-width: 1199px) {
+                border-radius: 0;
+            }
         }
     }
 }
