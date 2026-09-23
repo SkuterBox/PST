@@ -9,10 +9,12 @@
     padding: 0 .75em;
     &--50 {
         display: grid;
-        grid-template-columns: 1fr 1fr;
         gap: clamp(2rem, 1.3182rem + 3.0303vw, 4rem);
         align-items: center;
         align-content: center;
+        @media(min-width: 1025px) {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 }
 .color-accent {
