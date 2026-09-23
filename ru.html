@@ -402,11 +402,36 @@
                     Свяжитесь <span class="color-accent">с нами</span>
                 </h2>
 
-                <form class="contact__form contact__form--disabled" id="contact-form"
+                <h3 class="about__subheader">
+                    Сотрудничество начинается с разговора
+                </h3>
+                <div class="about__description">
+                    <p>
+                        Для каждого проекта нужны люди с подходящими навыками. Если вы ищете операторов строительной техники, водителей или других технических специалистов, расскажите нам, кто вам требуется и где будут проводиться работы. Информация о характере работ, необходимых допусках и планируемой дате начала поможет нам обсудить конкретные возможности сотрудничества.
+                    </p>
+                    <p>
+                        Вы специалист и хотите присоединиться к нашей команде? Расскажите о своём опыте, квалификации и проектах, в которых вам хотелось бы участвовать. Выберите анкету для кандидатов и представьтесь — нам будет интересно узнать, чем вы занимаетесь и какую работу ищете.
+                    </p>
+                </div>
+            </div>
+
+            <div class="contact__right">
+                <div class="contact__switch" role="tablist" aria-label="Тип формы">
+                    <button class="contact__switch-btn active" id="contact-form-firms-tab" type="button" role="tab" aria-selected="true" aria-controls="contact-form-firms" data-contact-form-target="contact-form-firms">
+                        Для компаний
+                    </button>
+                    <button class="contact__switch-btn" id="contact-form-career-tab" type="button" role="tab" aria-selected="false" aria-controls="contact-form-career" data-contact-form-target="contact-form-career">
+                        Карьера
+                    </button>
+                </div>
+                <form class="contact__form contact__form--disabled" id="contact-form-firms" data-contact-form-panel="firms" aria-labelledby="contact-form-firms-tab"
                       data-phone-error="Введите корректный номер телефона."
                       data-sending-label="Отправка..."
                       data-success-label="Сообщение отправлено"
                       data-retry-label="Попробовать снова">
+                    <h3 class="contact__subheader">
+                        Запросить специалистов
+                    </h3>
                     <label class="form-label" for="name">Имя и фамилия*</label>
                     <input id="name" type="text" name="q8_imieI" placeholder="Имя и фамилия*" required>
 
@@ -432,25 +457,166 @@
                              data-lazy-recaptcha
                              data-sitekey="6LdU3CgUAAAAAB0nnFM3M3T0sy707slYYU51RroJ"></div>
                         <input type="hidden" id="input_9" name="recaptcha_visible" required>
-                        <button type="submit" aria-live="polite" aria-disabled="true" disabled>Отправить сообщение</button>
+                        <button class="contact__form-submit" type="submit" aria-live="polite" aria-disabled="true" disabled>Отправить сообщение</button>
+                    </div>
+                </form>
+                <form class="contact__form contact__form--disabled" id="contact-form-career" data-contact-form-panel="career" aria-labelledby="contact-form-career-tab" hidden
+                      data-phone-error="Введите корректный номер телефона."
+                      data-specialization-error="Выберите хотя бы одну специализацию."
+                      data-sending-label="Отправка..."
+                      data-success-label="Сообщение отправлено"
+                      data-retry-label="Попробовать снова">
+                    <h3 class="contact__subheader">
+                        Присоединяйтесь к нашей команде
+                    </h3>
+                    <label class="form-label" for="career-name">Имя и фамилия*</label>
+                    <input id="career-name" type="text" name="q2_q2_textbox0" placeholder="Имя и фамилия*" required>
+
+                    <div class="contact-multiselect" data-multiselect>
+                        <button class="contact-multiselect__toggle" type="button" aria-expanded="false" aria-controls="career-specializations">
+                            <span data-multiselect-label>Специализации*</span>
+                        </button>
+                        <div class="contact-multiselect__options" id="career-specializations" hidden>
+                            <label class="contact-multiselect__option" for="career-specialization-0">
+                                <input id="career-specialization-0" type="checkbox" name="q3_q3_checkbox1[]" value="Żurawie samojezdne">
+                                <span>Автокраны</span>
+                            </label>
+                            <label class="contact-multiselect__option" for="career-specialization-1">
+                                <input id="career-specialization-1" type="checkbox" name="q3_q3_checkbox1[]" value="Żurawie wieżowe">
+                                <span>Башенные краны</span>
+                            </label>
+                            <label class="contact-multiselect__option" for="career-specialization-2">
+                                <input id="career-specialization-2" type="checkbox" name="q3_q3_checkbox1[]" value="Mobilne żurawie wieżowe">
+                                <span>Мобильные башенные краны</span>
+                            </label>
+                            <label class="contact-multiselect__option" for="career-specialization-3">
+                                <input id="career-specialization-3" type="checkbox" name="q3_q3_checkbox1[]" value="Żurawie gąsienicowe">
+                                <span>Гусеничные краны</span>
+                            </label>
+                            <label class="contact-multiselect__option" for="career-specialization-4">
+                                <input id="career-specialization-4" type="checkbox" name="q3_q3_checkbox1[]" value="Miniżurawie">
+                                <span>Мини&#8209;краны</span>
+                            </label>
+                            <label class="contact-multiselect__option" for="career-specialization-5">
+                                <input id="career-specialization-5" type="checkbox" name="q3_q3_checkbox1[]" value="HDS">
+                                <span>Краны&#8209;манипуляторы</span>
+                            </label>
+                            <label class="contact-multiselect__option" for="career-specialization-6">
+                                <input id="career-specialization-6" type="checkbox" name="q3_q3_checkbox1[]" value="Ładowarki teleskopowe">
+                                <span>Телескопические погрузчики</span>
+                            </label>
+                            <label class="contact-multiselect__option" for="career-specialization-7">
+                                <input id="career-specialization-7" type="checkbox" name="q3_q3_checkbox1[]" value="Wózki widłowe">
+                                <span>Вилочные погрузчики</span>
+                            </label>
+                            <label class="contact-multiselect__option" for="career-specialization-8">
+                                <input id="career-specialization-8" type="checkbox" name="q3_q3_checkbox1[]" value="Podesty nożycowe">
+                                <span>Ножничные подъёмники</span>
+                            </label>
+                            <label class="contact-multiselect__option" for="career-specialization-9">
+                                <input id="career-specialization-9" type="checkbox" name="q3_q3_checkbox1[]" value="Podnośniki koszowe">
+                                <span>Стреловые подъёмники</span>
+                            </label>
+                            <label class="contact-multiselect__option" for="career-specialization-10">
+                                <input id="career-specialization-10" type="checkbox" name="q3_q3_checkbox1[]" value="Kierowcy C+E">
+                                <span>Водители категории C+E</span>
+                            </label>
+                            <label class="contact-multiselect__option" for="career-specialization-11">
+                                <input id="career-specialization-11" type="checkbox" name="q3_q3_checkbox1[]" value="Hakowi">
+                                <span>Стропальщики</span>
+                            </label>
+                        </div>
                     </div>
 
+                    <label class="form-label" for="career-email">Электронная почта*</label>
+                    <input id="career-email" type="email" name="q4_q4_email2" placeholder="Электронная почта*" required>
+
+                    <label class="form-label" for="career-phone">Номер телефона*</label>
+                    <input id="career-phone" type="tel" name="q5_q5_phone3[full]" autocomplete="tel" placeholder="Номер телефона*" required>
+
+                    <label class="form-label" for="career-message">Сообщение / опишите свой опыт*</label>
+                    <textarea id="career-message" name="q6_q6_textarea4" placeholder="Сообщение / опишите свой опыт*" required></textarea>
+
+                    <input type="hidden" name="formID" value="262655946249067">
+                    <input type="hidden" name="q8_q8_textbox6" value="RU">
+
+                    <div class="contact__form-actions contact__form-actions--disabled">
+                        <div class="contact__captcha"
+                             id="career-recaptcha_input_7"
+                             hidden
+                             data-lazy-recaptcha
+                             data-sitekey="6LdU3CgUAAAAAB0nnFM3M3T0sy707slYYU51RroJ"></div>
+                        <input type="hidden" id="career-input_7" name="recaptcha_visible" required>
+                        <button class="contact__form-submit" type="submit" aria-live="polite" aria-disabled="true" disabled>Отправить сообщение</button>
+                    </div>
                 </form>
                 <div class="contact__form-description">
                     Мы используем предоставленные вами данные исключительно для обработки вашего запроса. Подробнее об обработке персональных данных читайте в нашей <a href="/politika-konfidencialnosti">политике конфиденциальности</a>.
                 </div>
-            </div>
-
-            <div class="contact__right">
-                <img class="contact__img img" src="images/contact.png" alt="" width="1536" height="1024" loading="lazy" fetchpriority="low">
             </div>
         </div>
     </section>
 
 </main>
 
-<footer class="footer">
+<footer class="footer section-spacing">
+    <div class="footer__container container">
+        <div class="footer__main">
+            <div class="footer-logo">
+                <img class="footer-logo__img img" src="images/logo.png" alt="Power Synergy Team" loading="eager" fetchpriority="high">
+                <div class="footer-logo__text">
+                    <span>Люди</span>
+                    <span>Техника</span>
+                    <span>Реальный результат</span>
+                </div>
+            </div>
 
+            <div class="footer__nav">
+                <h3 class="footer__header">
+                    Навигация
+                </h3>
+                <nav class="footer__nav-list" aria-label="Навигация в нижнем колонтитуле">
+                    <a href="#specialists">Наши специалисты</a>
+                    <a href="#about">О нас</a>
+                    <a href="#qualifications">Квалификация</a>
+                    <a href="#contact">Контакты</a>
+                </nav>
+            </div>
+
+            <div class="footer__contact">
+                <h3 class="footer__header">
+                    Карьера
+                </h3>
+                <a class="footer__contact-item" href="mailto:carrer@powersynergyteam.com">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><polyline points="224 56 128 144 32 56" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M32,56H224a0,0,0,0,1,0,0V192a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V56A0,0,0,0,1,32,56Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="110.55" y1="128" x2="34.47" y2="197.74" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="221.53" y1="197.74" x2="145.45" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+                    carrer@powersynergyteam.com
+                </a>
+                <a class="footer__contact-item" href="tel:+48797429963">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M164.39,145.34a8,8,0,0,1,7.59-.69l47.16,21.13a8,8,0,0,1,4.8,8.3A48.33,48.33,0,0,1,176,216,136,136,0,0,1,40,80,48.33,48.33,0,0,1,81.92,32.06a8,8,0,0,1,8.3,4.8l21.13,47.2a8,8,0,0,1-.66,7.53L89.32,117a7.93,7.93,0,0,0-.54,7.81c8.27,16.93,25.77,34.22,42.75,42.41a7.92,7.92,0,0,0,7.83-.59Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+                    +48797429963
+                </a>
+            </div>
+
+            <div class="footer__contact">
+                <h3 class="footer__header">
+                    Контакты
+                </h3>
+                <a class="footer__contact-item" href="mailto:contact@powersynergyteam.com">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><polyline points="224 56 128 144 32 56" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M32,56H224a0,0,0,0,1,0,0V192a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V56A0,0,0,0,1,32,56Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="110.55" y1="128" x2="34.47" y2="197.74" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="221.53" y1="197.74" x2="145.45" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+                    contact@powersynergyteam.com
+                </a>
+                <a class="footer__contact-item" href="tel:+48797429963">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M164.39,145.34a8,8,0,0,1,7.59-.69l47.16,21.13a8,8,0,0,1,4.8,8.3A48.33,48.33,0,0,1,176,216,136,136,0,0,1,40,80,48.33,48.33,0,0,1,81.92,32.06a8,8,0,0,1,8.3,4.8l21.13,47.2a8,8,0,0,1-.66,7.53L89.32,117a7.93,7.93,0,0,0-.54,7.81c8.27,16.93,25.77,34.22,42.75,42.41a7.92,7.92,0,0,0,7.83-.59Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+                    +48797429963
+                </a>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <span>© 2026 Power Synergy Team</span>
+            <a href="/politika-konfidencialnosti">Политика конфиденциальности</a>
+        </div>
+    </div>
 </footer>
 
 <script src="js/app.min.js"></script>

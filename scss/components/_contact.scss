@@ -4,14 +4,28 @@
         padding: clamp(5rem, -4rem + 18.75vw, 8rem) 0;
     }
     &__container {
+        align-content: flex-start;
+        align-items: flex-start;
         @media(max-width: 1199px) {
             grid-template-columns: 1fr;
         }
+    }
+    &__subheader {
+        color: var(--c-white);
+        font-size: clamp(1.25rem, 0.9943rem + 1.1364vw, 2rem);
+        margin: 0;
+        font-weight: 700;
+        text-wrap: balance;
+        text-align: center;
+        width: 100%;
     }
     &__form {
         display: flex;
         flex-wrap: wrap;
         gap: 1.5em;
+        &[hidden] {
+            display: none;
+        }
         &-description {
             font-size: 12px;
             text-align: center;
@@ -37,6 +51,30 @@
             }
 
             &--disabled button {
+                width: 100%;
+            }
+        }
+        &-submit {
+            width: calc(100% - 304px - 1em);
+            min-height: 78px;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            font-size: clamp(1rem, 0.9574rem + 0.1894vw, 1.125rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 1em;
+            border-radius: 8px;
+            background-color: var(--c-accent);
+            color: var(--c-black);
+            cursor: pointer;
+
+            &:disabled {
+                cursor: not-allowed;
+                opacity: 0.5;
+            }
+
+            @media (max-width: 767px) {
                 width: 100%;
             }
         }
@@ -90,50 +128,120 @@
             color: var(--c-white);
         }
     }
-    button {
-        width: calc(100% - 304px - 1em);
-        min-height: 78px;
-        border: none;
-        outline: none;
-        box-shadow: none;
-        font-size: clamp(1rem, 0.9574rem + 0.1894vw, 1.125rem);
-        font-weight: 700;
-        text-transform: uppercase;
-        padding: 1em;
-        border-radius: 8px;
-        background-color: var(--c-accent);
-        color: var(--c-black);
-        cursor: pointer;
 
-        &:disabled {
-            cursor: not-allowed;
-            opacity: 0.5;
+    &__switch {
+        display: grid;
+        gap: 1.5em;
+        margin-bottom: 1.5em;
+        @media(min-width: 576px) {
+            grid-template-columns: 1fr 1fr;
         }
-
-        @media (max-width: 767px) {
+        &-btn {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            font-size: 1.5em;
+            padding: 0.25em;
+            border-radius: 4px;
+            border: 2px solid var(--c-accent);
+            color: var(--c-accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
             width: 100%;
+            background-color: var(--bg-dark);
+            &.active {
+                background-color: var(--c-accent);
+                color: var(--c-black);
+            }
+            @media(max-width: 575px) {
+                font-size: 1rem;
+                padding: 0.5em;
+            }
+        }
+        @media(max-width: 575px) {
+            gap: 0.75em;
         }
     }
-    &__right {
-        height: 100%;
-        @media(max-width: 1199px) {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            opacity: 0.1;
-            height: auto;
+    &-multiselect {
+        position: relative;
+        width: 100%;
+        @media(min-width: 576px) {
+            max-width: calc(50% - 0.75rem);
         }
-        img {
-            border-radius: 8px;
+        &__toggle {
+            position: relative;
+            display: flex;
+            align-items: center;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: right center;
-            @media(max-width: 1199px) {
-                border-radius: 0;
+            min-height: 3rem;
+            padding: 0.875em 2.75em 0.875em 1em;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.70);
+            border-radius: 4px;
+            background-color: transparent;
+            color: var(--c-white);
+            font-size: 1rem;
+            text-align: left;
+            cursor: pointer;
+            span {
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 1em;
+                width: 0.55em;
+                height: 0.55em;
+                border-right: 2px solid currentColor;
+                border-bottom: 2px solid currentColor;
+                transform: translateY(-70%) rotate(45deg);
+                transition: transform 0.2s ease;
+            }
+        }
+        &__options {
+            position: absolute;
+            z-index: 3;
+            top: calc(100% + 0.35rem);
+            left: 0;
+            width: 100%;
+            max-height: 18rem;
+            padding: 0.5rem;
+            overflow-y: auto;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 4px;
+            background-color: var(--bg-dark);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.35);
+        }
+        &__option {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.65em;
+            padding: 0.55em 0.5em;
+            color: var(--c-white);
+            cursor: pointer;
+            input {
+                flex: 0 0 auto;
+                margin-top: 0.15em;
+                accent-color: var(--c-accent);
+            }
+            &:hover {
+                color: var(--c-accent);
+            }
+        }
+        &.open &__toggle:after {
+            transform: translateY(-20%) rotate(225deg);
+        }
+        &.error &__toggle {
+            border-color: #d93025;
+            outline: 1px solid #d93025;
         }
     }
 }

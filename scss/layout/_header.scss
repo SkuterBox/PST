@@ -78,7 +78,6 @@
                 display: grid;
                 gap: 1.25rem;
                 background-color: var(--bg-dark);
-                box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.35);
             }
             &:has(.header__language.open) {
                 @media(max-width: 1023px) {

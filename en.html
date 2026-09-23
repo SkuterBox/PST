@@ -397,14 +397,39 @@
         <div class="contact__container container container--50">
             <div class="contact__left">
                 <h2 class="contact__header section-header">
-                    Contact <span class="color-accent">us</span>
+                    Get in touch <span class="color-accent">with us</span>
                 </h2>
 
-                <form class="contact__form contact__form--disabled" id="contact-form"
+                <h3 class="about__subheader">
+                    Working together starts with a conversation
+                </h3>
+                <div class="about__description">
+                    <p>
+                        Every project needs people with the right skills. If you are looking for construction equipment operators, drivers or other technical specialists, tell us who you need and where the work will take place. Knowing the scope of work, required qualifications and planned start date will help us discuss how we can work together.
+                    </p>
+                    <p>
+                        Are you a specialist interested in joining our team? Tell us about your experience, qualifications and the projects you would like to work on. Choose the candidate form and introduce yourself — we would be glad to learn what you do and what kind of work you are looking for.
+                    </p>
+                </div>
+            </div>
+
+            <div class="contact__right">
+                <div class="contact__switch" role="tablist" aria-label="Form type">
+                    <button class="contact__switch-btn active" id="contact-form-firms-tab" type="button" role="tab" aria-selected="true" aria-controls="contact-form-firms" data-contact-form-target="contact-form-firms">
+                        For companies
+                    </button>
+                    <button class="contact__switch-btn" id="contact-form-career-tab" type="button" role="tab" aria-selected="false" aria-controls="contact-form-career" data-contact-form-target="contact-form-career">
+                        Career
+                    </button>
+                </div>
+                <form class="contact__form contact__form--disabled" id="contact-form-firms" data-contact-form-panel="firms" aria-labelledby="contact-form-firms-tab"
                       data-phone-error="Enter a valid phone number."
                       data-sending-label="Sending..."
                       data-success-label="Message sent"
                       data-retry-label="Try again">
+                    <h3 class="contact__subheader">
+                        Ask about specialists
+                    </h3>
                     <label class="form-label" for="name">Full name*</label>
                     <input id="name" type="text" name="q8_imieI" placeholder="Full name*" required>
 
@@ -430,24 +455,165 @@
                              data-lazy-recaptcha
                              data-sitekey="6LdU3CgUAAAAAB0nnFM3M3T0sy707slYYU51RroJ"></div>
                         <input type="hidden" id="input_9" name="recaptcha_visible" required>
-                        <button type="submit" aria-live="polite" aria-disabled="true" disabled>Send message</button>
+                        <button class="contact__form-submit" type="submit" aria-live="polite" aria-disabled="true" disabled>Send message</button>
+                    </div>
+                </form>
+                <form class="contact__form contact__form--disabled" id="contact-form-career" data-contact-form-panel="career" aria-labelledby="contact-form-career-tab" hidden
+                      data-phone-error="Enter a valid phone number."
+                      data-specialization-error="Select at least one specialisation."
+                      data-sending-label="Sending..."
+                      data-success-label="Message sent"
+                      data-retry-label="Try again">
+                    <h3 class="contact__subheader">
+                        Join our team
+                    </h3>
+                    <label class="form-label" for="career-name">Full name*</label>
+                    <input id="career-name" type="text" name="q2_q2_textbox0" placeholder="Full name*" required>
+
+                    <div class="contact-multiselect" data-multiselect>
+                        <button class="contact-multiselect__toggle" type="button" aria-expanded="false" aria-controls="career-specializations">
+                            <span data-multiselect-label>Specialisations*</span>
+                        </button>
+                        <div class="contact-multiselect__options" id="career-specializations" hidden>
+                            <label class="contact-multiselect__option" for="career-specialization-0">
+                                <input id="career-specialization-0" type="checkbox" name="q3_q3_checkbox1[]" value="Żurawie samojezdne">
+                                <span>Mobile cranes</span>
+                            </label>
+                            <label class="contact-multiselect__option" for="career-specialization-1">
+                                <input id="career-specialization-1" type="checkbox" name="q3_q3_checkbox1[]" value="Żurawie wieżowe">
+                                <span>Tower cranes</span>
+                            </label>
+                            <label class="contact-multiselect__option" for="career-specialization-2">
+                                <input id="career-specialization-2" type="checkbox" name="q3_q3_checkbox1[]" value="Mobilne żurawie wieżowe">
+                                <span>Mobile tower cranes</span>
+                            </label>
+                            <label class="contact-multiselect__option" for="career-specialization-3">
+                                <input id="career-specialization-3" type="checkbox" name="q3_q3_checkbox1[]" value="Żurawie gąsienicowe">
+                                <span>Crawler cranes</span>
+                            </label>
+                            <label class="contact-multiselect__option" for="career-specialization-4">
+                                <input id="career-specialization-4" type="checkbox" name="q3_q3_checkbox1[]" value="Miniżurawie">
+                                <span>Mini cranes</span>
+                            </label>
+                            <label class="contact-multiselect__option" for="career-specialization-5">
+                                <input id="career-specialization-5" type="checkbox" name="q3_q3_checkbox1[]" value="HDS">
+                                <span>Loader cranes</span>
+                            </label>
+                            <label class="contact-multiselect__option" for="career-specialization-6">
+                                <input id="career-specialization-6" type="checkbox" name="q3_q3_checkbox1[]" value="Ładowarki teleskopowe">
+                                <span>Telehandlers</span>
+                            </label>
+                            <label class="contact-multiselect__option" for="career-specialization-7">
+                                <input id="career-specialization-7" type="checkbox" name="q3_q3_checkbox1[]" value="Wózki widłowe">
+                                <span>Forklifts</span>
+                            </label>
+                            <label class="contact-multiselect__option" for="career-specialization-8">
+                                <input id="career-specialization-8" type="checkbox" name="q3_q3_checkbox1[]" value="Podesty nożycowe">
+                                <span>Scissor lifts</span>
+                            </label>
+                            <label class="contact-multiselect__option" for="career-specialization-9">
+                                <input id="career-specialization-9" type="checkbox" name="q3_q3_checkbox1[]" value="Podnośniki koszowe">
+                                <span>Boom lifts</span>
+                            </label>
+                            <label class="contact-multiselect__option" for="career-specialization-10">
+                                <input id="career-specialization-10" type="checkbox" name="q3_q3_checkbox1[]" value="Kierowcy C+E">
+                                <span>C+E drivers</span>
+                            </label>
+                            <label class="contact-multiselect__option" for="career-specialization-11">
+                                <input id="career-specialization-11" type="checkbox" name="q3_q3_checkbox1[]" value="Hakowi">
+                                <span>Slinger/Signallers</span>
+                            </label>
+                        </div>
                     </div>
 
+                    <label class="form-label" for="career-email">Email address*</label>
+                    <input id="career-email" type="email" name="q4_q4_email2" placeholder="Email address*" required>
+
+                    <label class="form-label" for="career-phone">Phone number*</label>
+                    <input id="career-phone" type="tel" name="q5_q5_phone3[full]" autocomplete="tel" placeholder="Phone number*" required>
+
+                    <label class="form-label" for="career-message">Message / describe your experience*</label>
+                    <textarea id="career-message" name="q6_q6_textarea4" placeholder="Message / describe your experience*" required></textarea>
+
+                    <input type="hidden" name="formID" value="262655946249067">
+                    <input type="hidden" name="q8_q8_textbox6" value="EN">
+
+                    <div class="contact__form-actions contact__form-actions--disabled">
+                        <div class="contact__captcha"
+                             id="career-recaptcha_input_7"
+                             hidden
+                             data-lazy-recaptcha
+                             data-sitekey="6LdU3CgUAAAAAB0nnFM3M3T0sy707slYYU51RroJ"></div>
+                        <input type="hidden" id="career-input_7" name="recaptcha_visible" required>
+                        <button class="contact__form-submit" type="submit" aria-live="polite" aria-disabled="true" disabled>Send message</button>
+                    </div>
                 </form>
                 <div class="contact__form-description">
                     We will use the information you provide solely to respond to your enquiry. For details on how we process personal data, see our <a href="/privacy">Privacy Policy</a>.
                 </div>
             </div>
-
-            <div class="contact__right">
-                <img class="contact__img img" src="images/contact.png" alt="" width="1536" height="1024" loading="lazy" fetchpriority="low">
-            </div>
         </div>
     </section>
 </main>
 
-<footer class="footer">
+<footer class="footer section-spacing">
+    <div class="footer__container container">
+        <div class="footer__main">
+            <div class="footer-logo">
+                <img class="footer-logo__img img" src="images/logo.png" alt="Power Synergy Team" loading="eager" fetchpriority="high">
+                <div class="footer-logo__text">
+                    <span>People</span>
+                    <span>Machines</span>
+                    <span>Real results</span>
+                </div>
+            </div>
 
+            <div class="footer__nav">
+                <h3 class="footer__header">
+                    Navigation
+                </h3>
+                <nav class="footer__nav-list" aria-label="Footer navigation">
+                    <a href="#specialists">Our specialists</a>
+                    <a href="#about">About us</a>
+                    <a href="#qualifications">Qualifications</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+
+            <div class="footer__contact">
+                <h3 class="footer__header">
+                    Career
+                </h3>
+                <a class="footer__contact-item" href="mailto:carrer@powersynergyteam.com">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><polyline points="224 56 128 144 32 56" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M32,56H224a0,0,0,0,1,0,0V192a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V56A0,0,0,0,1,32,56Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="110.55" y1="128" x2="34.47" y2="197.74" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="221.53" y1="197.74" x2="145.45" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+                    carrer@powersynergyteam.com
+                </a>
+                <a class="footer__contact-item" href="tel:+48797429963">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M164.39,145.34a8,8,0,0,1,7.59-.69l47.16,21.13a8,8,0,0,1,4.8,8.3A48.33,48.33,0,0,1,176,216,136,136,0,0,1,40,80,48.33,48.33,0,0,1,81.92,32.06a8,8,0,0,1,8.3,4.8l21.13,47.2a8,8,0,0,1-.66,7.53L89.32,117a7.93,7.93,0,0,0-.54,7.81c8.27,16.93,25.77,34.22,42.75,42.41a7.92,7.92,0,0,0,7.83-.59Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+                    +48797429963
+                </a>
+            </div>
+
+            <div class="footer__contact">
+                <h3 class="footer__header">
+                    Contact
+                </h3>
+                <a class="footer__contact-item" href="mailto:contact@powersynergyteam.com">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><polyline points="224 56 128 144 32 56" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M32,56H224a0,0,0,0,1,0,0V192a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V56A0,0,0,0,1,32,56Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="110.55" y1="128" x2="34.47" y2="197.74" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="221.53" y1="197.74" x2="145.45" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+                    contact@powersynergyteam.com
+                </a>
+                <a class="footer__contact-item" href="tel:+48797429963">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M164.39,145.34a8,8,0,0,1,7.59-.69l47.16,21.13a8,8,0,0,1,4.8,8.3A48.33,48.33,0,0,1,176,216,136,136,0,0,1,40,80,48.33,48.33,0,0,1,81.92,32.06a8,8,0,0,1,8.3,4.8l21.13,47.2a8,8,0,0,1-.66,7.53L89.32,117a7.93,7.93,0,0,0-.54,7.81c8.27,16.93,25.77,34.22,42.75,42.41a7.92,7.92,0,0,0,7.83-.59Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+                    +48797429963
+                </a>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <span>© 2026 Power Synergy Team</span>
+            <a href="/privacy">Privacy Policy</a>
+        </div>
+    </div>
 </footer>
 
 <script src="js/app.min.js"></script>
